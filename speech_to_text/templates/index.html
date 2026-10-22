@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speech to Text</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Speech to Text</h1>
+
+        <p>Convert your speech into text easily.</p>
+
+        <!-- Dashboard Button -->
+        <a href="{{ url_for('dashboard') }}">
+            <button type="button">📋 Dashboard</button>
+        </a>
+
+        <hr>
+
+        <!-- Speech to Text Buttons -->
+        <button id="startBtn">🎤 Start Speaking</button>
+
+        <button id="stopBtn">Stop</button>
+
+        <!-- Transcription Text Area -->
+        <textarea
+            id="transcription"
+            placeholder="Your speech will appear here...">
+        </textarea>
+
+        <!-- Save Button -->
+        <button id="saveBtn">Save Transcription</button>
+
+        <!-- Message -->
+        <p id="message"></p>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
